@@ -36,4 +36,6 @@ WORKDIR ${APP_HOME}/PeekingDuck
 RUN chmod +x ./setup.sh
 RUN ./setup.sh
 
-CMD ['bash']
+ENV SHELL="/bin/bash"
+
+CMD ['/bin/bash']
