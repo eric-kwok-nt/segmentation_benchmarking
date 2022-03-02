@@ -38,4 +38,4 @@ RUN ./setup.sh
 
 ENV SHELL="/bin/bash"
 
-CMD ['/bin/bash']
+CMD ["/bin/bash"]
