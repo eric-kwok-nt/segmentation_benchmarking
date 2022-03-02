@@ -5,6 +5,7 @@ import torchvision.transforms as T
 from time import perf_counter
 import logging
 from PIL import Image
+import pathlib
 
 torch.set_grad_enabled(False)
 
@@ -61,7 +62,8 @@ def main(gpu, repo, model_name):
         "../data/videos/multiple_people.mp4",
     ]
     for path in video_paths:
-        logger.info(f"Recording time for {model_name}")
+        filename = pathlib.Path(path).name
+        logger.info(f"Recording time for {filename}")
         for i in range(3):
             logger.info(f"Run number {i+1}")
             cap = cv2.VideoCapture(path)
