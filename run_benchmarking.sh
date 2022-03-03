@@ -87,7 +87,7 @@ benchmark() {
             python -m src.inference_time ${GPU} --config ${CONFIG_PARENT_DIR}${config_files[$i]} --ckpt ${CKPT_PARENT_DIR}${checkpoints[$i]} \
             2>&1 | tee -a "logs/"${model_name[$i]}".txt"
         else
-            python -m src.inference_time ${GPU} --gpu --repo ${repo[$i]} --model_name ${model_name[$i]}\
+            python -m src.inference_time ${GPU} --repo ${repo[$i]} --model_name ${model_name[$i]}\
             2>&1 | tee -a "logs/"${model_name[$i]}".txt"
         fi
         echo 
